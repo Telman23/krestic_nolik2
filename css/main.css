@@ -1,0 +1,120 @@
+.wrapper {
+    background-color: #181818;
+    min-height: 100%;
+    color: #fff;
+    font-family: 'TT TANK', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.header__container {
+    display: flex;
+    /* Расстояние между колонками flex-контейнера*/
+    column-gap: 32px;
+}
+
+.logo {
+    display: block;
+    width: 54px;
+    height: 70px;
+}
+
+.header_logo {}
+
+.logo__img {}
+
+.header__content {
+    flex: 1;
+    /*
+    flex:1 аналогично flex: 1 1 0%
+
+    Разрешаем элементу растягиваться если в контейнере есть свободное пространство 
+    flex-grow: 1;
+    Разрешаем элементу ужиматься если место в контейнере не хватает
+    flex-shrink: 1;
+    Базовый размер (в нашем случае начальная ширина):
+    flex-basis: 0%; */
+}
+
+/* Верхняя часть шапки */
+.header__top {
+    /*Расположить элементы рядом друг с другом */
+    display: flex;
+    /* Распределить свободное пространство в контейнере поровну.Крайние элементы при этом прижмутся к краям контейнера */
+    justify-content: space-between;
+    /*Ширина границы, тип границы ( solid-сплошная линия), цвет границы*/
+    border-bottom: 1px solid #fff;
+    /* Нижний внутренний отступ */
+    padding-bottom: 10px;
+    /*Прижать элементы ро вертикали к верхнему краю flex - контейнера */
+    align-items: flex-start;
+}
+
+.location {
+    font-weight: 500;
+    font-size: 14px;
+    color: #939697;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.location::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    /*Фоновое изображение псевдоэлементв (картинка локации)*/
+    background-image: url(../img/location.svg);
+    /*Запретить фоновому изображению повторяться */
+    background-repeat: no-repeat;
+    /*Расположить фоновое изображение по центру блока */
+    background-position: center;
+    /*Установили фоновому изображению такой размер чтобы оно заполнило собой блок с сохранением пропорций */
+    background-size: contain;
+}
+
+.services {
+    display: flex;
+    column-gap: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.07em;
+}
+
+.services__item {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.services__item::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.services__service::before {
+    background-image: url(../img/service.svg);
+}
+
+.services__test-drive::before {
+    background-image: url(../img/test-drive.svg);
+}
+
+.services__link {}
